@@ -2,7 +2,7 @@ package net.davidcrotty.profile
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import net.davidcrotty.core.CoreComponentProvider
+import net.davidcrotty.core.*
 import javax.inject.Inject
 
 class ProfileActivity : AppCompatActivity() {
