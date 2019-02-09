@@ -3,9 +3,9 @@ package net.davidcrotty.core
 import android.content.res.Resources
 import android.util.Log
 
-class ExpensiveObject(resources: Resources) {
+class NetworkRepository(resources: Resources) {
 
-    private val TAG = "ExpensiveObject"
+    private val TAG = "NetworkRepository"
 
     init {
         Log.d(TAG, "created")

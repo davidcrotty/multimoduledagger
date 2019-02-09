@@ -5,7 +5,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class ExpensiveObjectModule(private val resources: Resources) {
-    @Provides fun provideModule() = ExpensiveObject(resources)
+class NetworkModule(private val resources: Resources) {
+    @Provides fun provideModule() = NetworkRepository(resources)
     @Provides fun provideResources() = resources
 }
