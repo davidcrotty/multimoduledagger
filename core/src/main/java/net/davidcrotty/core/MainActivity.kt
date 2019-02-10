@@ -1,5 +1,6 @@
 package net.davidcrotty.core
 
+import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -21,13 +22,19 @@ class MainActivity : AppCompatActivity() {
             // https://stackoverflow.com/questions/51035892/how-can-i-access-an-activity-from-another-feature-module
             // how does this affect shared element transitions?
 
-//            val intent = Intent()
-//            intent.setClassName("net.davidcrotty.profile", "net.davidcrotty.profile.ProfileActivity")
+            val intent = Intent()
+            intent.setClassName("net.davidcrotty.profile", "net.davidcrotty.profile.ProfileActivity")
 
-            val intent = Intent("net.davidcrotty.profile.ProfileActivity")
+//            val intent = Intent("net.davidcrotty.profile.ProfileActivity")
+
+            val compIntent = Intent()
+            val comp = ComponentName("net.davidcrotty.profile", "net.davidcrotty.profile.ProfileActivity")
+            compIntent.setComponent(comp)
 
             startActivity(
-                Intent(baseContext, Class.forName("net.davidcrotty.profile.ProfileActivity").javaClass)
+//                compIntent
+                intent
+//                Intent(applicationContext, Class.forName("net.davidcrotty.profile.ProfileActivity").javaClass)
             )
         }
     }

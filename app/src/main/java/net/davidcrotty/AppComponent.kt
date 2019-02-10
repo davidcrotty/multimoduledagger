@@ -1,4 +1,4 @@
-package net.davidcrotty.daggermultimodule
+package net.davidcrotty
 
 import dagger.Component
 

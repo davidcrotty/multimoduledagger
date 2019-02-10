@@ -1,4 +1,4 @@
-package net.davidcrotty.daggermultimodule
+package net.davidcrotty
 
 import android.app.Application
 import net.davidcrotty.core.CoreComponent
