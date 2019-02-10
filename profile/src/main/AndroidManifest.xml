@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="net.davidcrotty.profile">
         <application>
-            <activity android:name="net.davidcrotty.profile.ProfileActivity" >
+            <activity android:name="net.davidcrotty.profile.ProfileActivity">
             </activity>
         </application>
 </manifest>

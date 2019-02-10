@@ -23,13 +23,13 @@ class MainActivity : AppCompatActivity() {
             // how does this affect shared element transitions?
 
             val intent = Intent()
-            intent.setClassName("net.davidcrotty.profile", "net.davidcrotty.profile.ProfileActivity")
+            intent.setClassName("net.davidcrotty.profile", "ProfileActivity")
 
 //            val intent = Intent("net.davidcrotty.profile.ProfileActivity")
 
-            val compIntent = Intent()
-            val comp = ComponentName("net.davidcrotty.profile", "net.davidcrotty.profile.ProfileActivity")
-            compIntent.setComponent(comp)
+//            val compIntent = Intent()
+//            val comp = ComponentName("net.davidcrotty.profile", "net.davidcrotty.profile.ProfileActivity")
+//            compIntent.setComponent(comp)
 
             startActivity(
 //                compIntent
