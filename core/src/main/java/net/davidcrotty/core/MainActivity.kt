@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
             // https://stackoverflow.com/questions/51035892/how-can-i-access-an-activity-from-another-feature-module
             // how does this affect shared element transitions?
 
-            val intent = Intent()
-            intent.setClassName("net.davidcrotty.profile", "ProfileActivity")
+//            val intent = Intent()
+//            intent.setClassName("net.davidcrotty.profile", "ProfileActivity")
 
 //            val intent = Intent("net.davidcrotty.profile.ProfileActivity")
 
@@ -31,11 +31,14 @@ class MainActivity : AppCompatActivity() {
 //            val comp = ComponentName("net.davidcrotty.profile", "net.davidcrotty.profile.ProfileActivity")
 //            compIntent.setComponent(comp)
 
-            startActivity(
+//            startActivity(
 //                compIntent
-                intent
+//                intent
 //                Intent(applicationContext, Class.forName("net.davidcrotty.profile.ProfileActivity").javaClass)
-            )
+//            )
+
+            val navigator = application as ProfileNavigator
+            navigator.navigateToProfile()
         }
     }
 }

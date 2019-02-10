@@ -1,17 +1,27 @@
 package net.davidcrotty
 
 import android.app.Application
-import net.davidcrotty.core.CoreComponent
-import net.davidcrotty.core.CoreComponentProvider
-import net.davidcrotty.core.DaggerCoreComponent
+import android.content.Intent
+import net.davidcrotty.core.*
+import net.davidcrotty.profile.ProfileActivity
 
-class App : Application(), CoreComponentProvider {
+class App : Application(), CoreComponentProvider, ProfileNavigator {
 
     override fun onCreate() {
         super.onCreate()
     }
 
     override fun provideCoreComponent(): CoreComponent {
-        return DaggerCoreComponent.builder().build()
+        return DaggerCoreComponent.builder()
+            .networkModule(
+                NetworkModule(resources)
+            )
+            .build()
+    }
+
+    override fun navigateToProfile() {
+        startActivity(
+            Intent(this, ProfileActivity::class.java)
+        )
     }
 }
