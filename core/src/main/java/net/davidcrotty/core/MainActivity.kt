@@ -15,28 +15,6 @@ class MainActivity : AppCompatActivity() {
         Log.d("MainActivity", "Fully qualified name ${MainActivity::class.java.canonicalName}")
 
         launch_profile.setOnClickListener {
-            // airbnb say its possible to do this :s
-            // need context from profile
-
-            // could use deep linking / feature modules this is recommended practice
-            // https://stackoverflow.com/questions/51035892/how-can-i-access-an-activity-from-another-feature-module
-            // how does this affect shared element transitions?
-
-//            val intent = Intent()
-//            intent.setClassName("net.davidcrotty.profile", "ProfileActivity")
-
-//            val intent = Intent("net.davidcrotty.profile.ProfileActivity")
-
-//            val compIntent = Intent()
-//            val comp = ComponentName("net.davidcrotty.profile", "net.davidcrotty.profile.ProfileActivity")
-//            compIntent.setComponent(comp)
-
-//            startActivity(
-//                compIntent
-//                intent
-//                Intent(applicationContext, Class.forName("net.davidcrotty.profile.ProfileActivity").javaClass)
-//            )
-
             val navigator = application as ProfileNavigator
             navigator.navigateToProfile()
         }
