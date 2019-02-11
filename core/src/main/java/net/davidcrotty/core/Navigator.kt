@@ -1,5 +1,6 @@
 package net.davidcrotty.core
 
-interface ProfileNavigator {
+interface Navigator {
     fun navigateToProfile()
+    fun navigateToFeed()
 }

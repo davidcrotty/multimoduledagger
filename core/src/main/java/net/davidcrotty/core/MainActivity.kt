@@ -1,7 +1,5 @@
 package net.davidcrotty.core
 
-import android.content.ComponentName
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -15,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("MainActivity", "Fully qualified name ${MainActivity::class.java.canonicalName}")
 
         launch_profile.setOnClickListener {
-            val navigator = application as ProfileNavigator
+            val navigator = application as Navigator
             navigator.navigateToProfile()
         }
     }

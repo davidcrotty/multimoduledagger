@@ -1,1 +1,1 @@
-include ':app', ':core', ':profile'
+include ':app', ':core', ':profile', ':feed'
